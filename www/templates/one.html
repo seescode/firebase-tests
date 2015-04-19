@@ -1,7 +1,13 @@
 <ion-view title="Japanese Helper">
     <ion-content class="padding">
-        <div class="list card">
-          Page one
-        </div>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Enter data here">
+        </label>
+      </div>
+      <div>
+        <button ng-click="vm.setItem()" class="button button-block button-positive">Set</button>
+        <button ng-click="vm.updateItem()" class="button button-block button-positive">Update</button>
+      </div>
     </ion-content>
 </ion-view>

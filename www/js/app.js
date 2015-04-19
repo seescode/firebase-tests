@@ -12,7 +12,8 @@ angular.module('starter', ['ionic'])
   })
   .state('one', {
     url: '/one',
-    templateUrl: 'templates/one.html'
+    templateUrl: 'templates/one.html',
+    controller: 'OneController as vm'
   })
   .state('two', {
     url: '/two',
