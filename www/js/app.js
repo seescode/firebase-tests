@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'firebase'])
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('home', {
@@ -17,19 +17,23 @@ angular.module('starter', ['ionic'])
   })
   .state('two', {
     url: '/two',
-    templateUrl: 'templates/two.html'
+    templateUrl: 'templates/two.html',
+    controller: 'TwoController as vm'
   })
   .state('three', {
     url: '/three',
-    templateUrl: 'templates/three.html'
+    templateUrl: 'templates/three.html',
+    controller: 'ThreeController as vm'
   })
   .state('four', {
     url: '/four',
-    templateUrl: 'templates/four.html'
+    templateUrl: 'templates/four.html',
+    controller: 'FourController as vm'
   })
   .state('five', {
     url: '/five',
-    templateUrl: 'templates/five.html'
+    templateUrl: 'templates/five.html',
+    controller: 'FiveController as vm'
   })
 
 

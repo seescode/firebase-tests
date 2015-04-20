@@ -2,12 +2,12 @@
     <ion-content class="padding">
       <div class="list">
         <label class="item item-input">
-          <input type="text" placeholder="Enter data here">
+          <input type="text" ng-model="data.one"/>
         </label>
       </div>
       <div>
-        <button ng-click="vm.setItem()" class="button button-block button-positive">Set</button>
-        <button ng-click="vm.updateItem()" class="button button-block button-positive">Update</button>
+        <h1>You said: {{ data.one }}</h1>
       </div>
+
     </ion-content>
 </ion-view>
