@@ -6,7 +6,7 @@
         </label>
       </div>
       <div>
-        <h1>You said: {{ data.a1 }}</h1>
+        <h1>data.a1: {{ data.a1 }}</h1>
       </div>
       <div class="list">
         <label class="item item-input">
@@ -14,7 +14,16 @@
         </label>
       </div>
       <div>
-        <h1>You said: {{ data.a2 }}</h1>
+        <h1>data.a2: {{ data.a2 }}</h1>
+      </div>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="data.a2.inner"/>
+        </label>
+      </div>
+      <div>
+        <h1>data.a2.inner: {{ data.a2.inner }}</h1>
+        <h2>Interesting if you set data.a2 you are prevented from setting data.a2.inner</h2>
       </div>
 
     </ion-content>
