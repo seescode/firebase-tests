@@ -24,5 +24,13 @@
             });
           };
 
-      });
-})();
+          vm.removeItem = function() {
+            obj.$remove().then(function(ref) {
+            // data has been deleted locally and in Firebase
+            }, function(error) {
+              console.log("Error:", error);
+            });
+          }
+
+        }
+)})();
