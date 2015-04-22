@@ -35,6 +35,31 @@ angular.module('starter', ['ionic', 'firebase'])
     templateUrl: 'templates/five.html',
     controller: 'FiveController as vm'
   })
+  .state('six', {
+    url: '/six',
+    templateUrl: 'templates/six.html',
+    controller: 'SixController as vm'
+  })
+  .state('seven', {
+    url: '/seven',
+    templateUrl: 'templates/seven.html',
+    controller: 'SevenController as vm'
+  })
+  .state('eight', {
+    url: '/eight',
+    templateUrl: 'templates/eight.html',
+    controller: 'EightController as vm'
+  })
+  .state('nine', {
+    url: '/nine',
+    templateUrl: 'templates/nine.html',
+    controller: 'NineController as vm'
+  })
+  .state('ten', {
+    url: '/ten',
+    templateUrl: 'templates/ten.html',
+    controller: 'TenController as vm'
+  })
 
 
   $urlRouterProvider.otherwise('/')
