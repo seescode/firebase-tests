@@ -6,15 +6,10 @@
           var vm = this;
 
           var messagesRef = new Firebase("https://radiant-torch-6366.firebaseio.com/six");
-
-          // download the data from a Firebase ref into a (psuedo read-only) array
-          // all server changes are applied in realtime
           $scope.messages = $firebaseArray(messagesRef);
-          // create a query for the most recent 25 messages on the server
-          //var query = messagesRef.orderByChild("timestamp").limitToLast(25);
-          // the $firebaseArray service properly handles Firebase queries as well
-          //$scope.filteredMessages = $firebaseArray(query);
 
+          //You have to use an object and not a string.  Otherwise the 2 way binding
+          //doesn't work.
           $scope.data = {};
 
           vm.addItem = function() {
