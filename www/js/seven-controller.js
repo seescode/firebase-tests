@@ -18,11 +18,15 @@
         $scope.data = {};
 
         vm.addItem = function() {
-
           console.log($scope.data.newMessage);
           $scope.messages.$add( { msg : $scope.data.newMessage }).then(function(ref) {
             $scope.data.newMessage = "";
           });
         };
+
+        vm.deleteItem = function(msg) {
+          $scope.messages.$remove(msg);
+        };
+
       });
 })();

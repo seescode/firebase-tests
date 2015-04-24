@@ -6,6 +6,11 @@
         </label>
       </div>
       <div>
+          <ul>
+            <li ng-repeat="msg in messages" ng-bind-template="{{msg.msg}} click to delete" ng-click="vm.deleteItem(msg)"></li>
+          </ul>
+      </div>
+      <div>
         <h1>You said: {{ data.newMessage }}</h1>
       </div>
       <div>
