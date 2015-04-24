@@ -2,15 +2,42 @@
 
 (function () {
     angular.module('starter')
-      .controller('EightController', function ($scope, $firebaseObject) {
-          var vm = this;
+      .controller('EightController', function ($scope, $firebaseArray) {
+        var vm = this;
 
-          var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/");
+        var messagesRef = new Firebase("https://radiant-torch-6366.firebaseio.com/eight");
 
-          var syncObject = $firebaseObject(ref);
+        $scope.messages = $firebaseArray(messagesRef);
 
-          //It looks like we can name "data" to whatever we want.  It doesn't
-          //effect any of the key/value names on firebase.
-          syncObject.$bindTo($scope, "data");
+        $scope.data = {};
+
+        var toUpdate = false;
+        var updateItem = null;
+
+        vm.addItem = function() {
+          console.log($scope.data.newMessage);
+
+          if (toUpdate === false)
+          {
+            $scope.messages.$add( { msg : $scope.data.newMessage }).then(function(ref) {
+              $scope.data.newMessage = "";
+              toUpdate = false;
+            });
+          } else {
+            $scope.messages.$save(updateItem).then(function(ref) {
+              $scope.data.newMessage = "";
+              toUpdate = false;
+            });
+          }
+
+
+        };
+
+        vm.showItem = function(msg) {
+          $scope.data.newMessage = msg.msg;
+          toUpdate = true;
+          updateItem = msg;
+        };
+
       });
 })();
