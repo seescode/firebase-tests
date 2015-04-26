@@ -11,32 +11,18 @@
 
         $scope.data = {};
 
-        var toUpdate = false;
-        var updateItem = null;
+        var updateIndex = null;
 
-        vm.addItem = function() {
-          console.log($scope.data.newMessage);
-
-          if (toUpdate === false)
-          {
-            $scope.messages.$add( { msg : $scope.data.newMessage }).then(function(ref) {
-              $scope.data.newMessage = "";
-              toUpdate = false;
-            });
-          } else {
-            $scope.messages.$save(updateItem).then(function(ref) {
-              $scope.data.newMessage = "";
-              toUpdate = false;
-            });
-          }
-
-
+        vm.updateItem = function() {
+          $scope.messages[updateIndex].msg = $scope.data.message;
+          $scope.messages.$save(updateIndex).then(function(ref) {
+            $scope.data.message = "";
+          });
         };
 
-        vm.showItem = function(msg) {
-          $scope.data.newMessage = msg.msg;
-          toUpdate = true;
-          updateItem = msg;
+        vm.showItem = function(msg, index) {
+          $scope.data.message = msg.msg;
+          updateIndex = index;
         };
 
       });
