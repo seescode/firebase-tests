@@ -1,0 +1,26 @@
+rose leslie<ion-view title="Japanese Helper">
+    <ion-content class="padding">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="data.one"/>
+        </label>
+      </div>
+      <div>
+        <h1>You said: {{ data.one }}</h1>
+      </div>
+      
+      <div style="margin-top:50px">
+        <h1>Login Info ($getAuth):</h1>
+        <h4 ng-bind-template="Uid: {{uid}}"></h4>
+        <h4 ng-bind-template="Provider: {{provider}}"></h4>
+        <h4 ng-bind-template="Auth: {{auth}}"></h4>
+        <h4 ng-bind-template="Expires: {{expires}}"></h4>
+      </div>
+      
+      <div>
+        <button ng-click="vm.login()">Login</button>
+        <button ng-click="vm.logout()">Logout</button>          
+      </div>
+
+    </ion-content>
+</ion-view>

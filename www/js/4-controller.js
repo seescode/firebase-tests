@@ -2,14 +2,14 @@
 
 (function () {
     angular.module('starter')
-      .controller('FiveController', function ($scope, $firebaseObject) {
+      .controller('4Controller', function ($scope, $firebaseObject) {
           var vm = this;
 
-          var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/five");
+          var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/four");
 
-          var profileRef = ref.child('username');
+          //var profileRef = ref.child('username');
 
-          var obj = $firebaseObject(profileRef);
+          var obj = $firebaseObject(ref);
 
           vm.updateItem = function() {
 
@@ -24,13 +24,21 @@
             });
           };
 
-          vm.removeItem = function() {
-            obj.$remove().then(function(ref) {
-            // data has been deleted locally and in Firebase
+          vm.incrementItem = function() {
+            if (obj.x != null) {
+              obj.x++;
+            }
+            else {
+              obj.x = 1;
+            }
+
+            obj.$save().then(function(ref) {
+              ref.key() === obj.$id; // true
             }, function(error) {
               console.log("Error:", error);
             });
-          }
 
-        }
-)})();
+          };
+
+      });
+})();

@@ -10,55 +10,80 @@ angular.module('starter', ['ionic', 'firebase'])
     url: '/',
     templateUrl: 'templates/links.html'
   })
-  .state('one', {
-    url: '/one',
-    templateUrl: 'templates/one.html',
-    controller: 'OneController as vm'
+  .state('1', {
+    url: '/1',
+    templateUrl: 'templates/1.html',
+    controller: '1Controller as vm'
   })
-  .state('two', {
-    url: '/two',
-    templateUrl: 'templates/two.html',
-    controller: 'TwoController as vm'
+  .state('2', {
+    url: '/2',
+    templateUrl: 'templates/2.html',
+    controller: '2Controller as vm'
   })
-  .state('three', {
-    url: '/three',
-    templateUrl: 'templates/three.html',
-    controller: 'ThreeController as vm'
+  .state('3', {
+    url: '/3',
+    templateUrl: 'templates/3.html',
+    controller: '3Controller as vm'
   })
-  .state('four', {
-    url: '/four',
-    templateUrl: 'templates/four.html',
-    controller: 'FourController as vm'
+  .state('4', {
+    url: '/4',
+    templateUrl: 'templates/4.html',
+    controller: '4Controller as vm'
   })
-  .state('five', {
-    url: '/five',
-    templateUrl: 'templates/five.html',
-    controller: 'FiveController as vm'
+  .state('5', {
+    url: '/5',
+    templateUrl: 'templates/5.html',
+    controller: '5Controller as vm'
   })
-  .state('six', {
-    url: '/six',
-    templateUrl: 'templates/six.html',
-    controller: 'SixController as vm'
+  .state('6', {
+    url: '/6',
+    templateUrl: 'templates/6.html',
+    controller: '6Controller as vm'
   })
-  .state('seven', {
-    url: '/seven',
-    templateUrl: 'templates/seven.html',
-    controller: 'SevenController as vm'
+  .state('7', {
+    url: '/7',
+    templateUrl: 'templates/7.html',
+    controller: '7Controller as vm'
   })
-  .state('eight', {
-    url: '/eight',
-    templateUrl: 'templates/eight.html',
-    controller: 'EightController as vm'
+  .state('8', {
+    url: '/8',
+    templateUrl: 'templates/8.html',
+    controller: '8Controller as vm'
   })
-  .state('nine', {
-    url: '/nine',
-    templateUrl: 'templates/nine.html',
-    controller: 'NineController as vm'
+  .state('9', {
+    url: '/9',
+    templateUrl: 'templates/9.html',
+    controller: '9Controller as vm'
   })
-  .state('ten', {
-    url: '/ten',
-    templateUrl: 'templates/ten.html',
-    controller: 'TenController as vm'
+  .state('10', {
+    url: '/10',
+    templateUrl: 'templates/10.html',
+    controller: '10Controller as vm'
+  })
+  .state('11', {
+    url: '/11',
+    templateUrl: 'templates/11.html',
+    controller: '11Controller as vm'
+  })
+  .state('12', {
+    url: '/12',
+    templateUrl: 'templates/12.html',
+    controller: '12Controller as vm'
+  })
+  .state('13', {
+    url: '/13',
+    templateUrl: 'templates/13.html',
+    controller: '13Controller as vm'
+  })
+  .state('14', {
+    url: '/14',
+    templateUrl: 'templates/14.html',
+    controller: '14Controller as vm'
+  })
+  .state('15', {
+    url: '/15',
+    templateUrl: 'templates/15.html',
+    controller: '15Controller as vm'
   })
 
 

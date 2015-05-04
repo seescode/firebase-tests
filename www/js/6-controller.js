@@ -2,7 +2,7 @@
 
 (function () {
     angular.module('starter')
-      .controller('SixController', function ($scope, $firebaseArray) {
+      .controller('6Controller', function ($scope, $firebaseArray) {
           var vm = this;
 
           var messagesRef = new Firebase("https://radiant-torch-6366.firebaseio.com/six");

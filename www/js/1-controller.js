@@ -2,7 +2,7 @@
 
 (function () {
     angular.module('starter')
-      .controller('OneController', function ($scope, $firebaseObject) {
+      .controller('1Controller', function ($scope, $firebaseObject) {
           var vm = this;
 
           var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/");

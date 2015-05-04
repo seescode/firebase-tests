@@ -2,10 +2,10 @@
 
 (function () {
   angular.module('starter')
-    .controller('TenController', function ($scope, $firebaseObject, $firebaseAuth) {
+    .controller('15Controller', function ($scope, $firebaseObject, $firebaseAuth) {
     var vm = this;
 
-    var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/ten");
+    var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/15");
 
     var auth = $firebaseAuth(ref);
 
