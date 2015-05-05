@@ -6,23 +6,19 @@
     var vm = this;
 
     var ref = new Firebase("https://radiant-torch-6366.firebaseio.com/11");
-
     var auth = $firebaseAuth(ref);
+
 
     var updateStatus = function () {
       var authData = auth.$getAuth();
 
-      if (authData) {
+      if (authData) {                
         $scope.uid = authData.uid;
-        $scope.provider = authData.provider;
-        $scope.auth = authData.auth;
-        $scope.expires = authData.expires;
-        console.log(authData)
+        ref = new Firebase("https://radiant-torch-6366.firebaseio.com/11/" + authData.uid);
+        var syncObject = $firebaseObject(ref);
+        syncObject.$bindTo($scope, "data");
       } else {
-        $scope.uid = "Not logged in";
-        $scope.provider = '';
-        $scope.auth = '';
-        $scope.expires = '';
+        $scope.uid = "";
       }
     };
     
@@ -42,11 +38,6 @@
       updateStatus();      
     }
 
-    var syncObject = $firebaseObject(ref);
-
-    //It looks like we can name "data" to whatever we want.  It doesn't
-    //effect any of the key/value names on firebase.
-    syncObject.$bindTo($scope, "data");
     
     updateStatus();
   });
